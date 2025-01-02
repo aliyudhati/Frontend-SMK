@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -45,6 +47,12 @@ const Navbar = () => {
           <a href="">Ekstrakurikuler</a>
         </li>
       </ul>
+      <div
+        className="flex xl:hidden tex-2xl font-bold"
+        onClick={() => setNav(!nav)}
+      >
+        {nav ? <IoClose /> : <AiOutlineMenu />}
+      </div>
     </div>
   );
 };
